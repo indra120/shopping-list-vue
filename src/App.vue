@@ -21,18 +21,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
+import { onMounted, onUpdated, ref } from "vue"
 import { ShoppingItem } from "./types"
 import Header from "./components/Header.vue"
 import ShoppingLists from "./components/ShoppingLists.vue"
 import AddShoppingItem from "./components/AddShoppingItem.vue"
 import Info from "./components/Info.vue"
 
-const shoppingList = ref<ShoppingItem[]>([
-  { title: "Susu ultra", count: 1 },
-  { title: "Tahu sumedang", count: 1 },
-  { title: "Semangka", count: 1 },
-])
+const shoppingList = ref<ShoppingItem[]>([])
+
+onMounted(() => {
+  const savedList = JSON.parse(localStorage.getItem("shopping-list")!) || []
+  console.log(savedList)
+
+  if (savedList.length > 0) {
+    shoppingList.value = savedList
+  }
+})
+
+onUpdated(() => {
+  localStorage.setItem("shopping-list", JSON.stringify(shoppingList.value))
+})
 
 const deleteAllItems = () => {
   shoppingList.value = []
