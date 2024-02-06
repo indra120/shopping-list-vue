@@ -6,7 +6,17 @@
   >
     <AddShoppingItem :shopping-list="shoppingList" />
     <Info :shopping-list="shoppingList" @delete-all="deleteAllItems" />
-    <ShoppingLists :shopping-list="shoppingList" />
+
+    <ShoppingLists
+      v-if="shoppingList.length > 0"
+      :shopping-list="shoppingList"
+    />
+    <div
+      v-else
+      className="size-full flex justify-center items-center text-base font-semibold"
+    >
+      There is nothing in here...
+    </div>
   </section>
 </template>
 
