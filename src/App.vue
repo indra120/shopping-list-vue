@@ -1,3 +1,7 @@
 <template>
-  <div class="text-red-500">Hi!</div>
+  <Header />
 </template>
+
+<script setup lang="ts">
+import Header from "./components/Header.vue"
+</script>
