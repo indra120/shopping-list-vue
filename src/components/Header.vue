@@ -6,5 +6,5 @@
 </template>
 
 <script setup lang="ts">
-import shoppingIcon from "../assets/shopping-icon.svg"
+import shoppingIcon from "@/assets/shopping-icon.svg"
 </script>

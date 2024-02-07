@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import { ShoppingItem } from "../types"
+import { ShoppingItem } from "@/types"
 
 const props = defineProps<{ shoppingList: ShoppingItem[] }>()
 const title = ref<string>()

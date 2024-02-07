@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue"
-import { ShoppingItem } from "../types"
+import { ShoppingItem } from "@/types"
 
 const props = defineProps<{ shoppingList: ShoppingItem[] }>()
 const emit = defineEmits<{ deleteAll: [] }>()

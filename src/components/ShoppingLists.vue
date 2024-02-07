@@ -16,10 +16,10 @@
 </template>
 
 <script setup lang="ts">
-import { ShoppingItem } from "../types"
-import ActionButton from "../components/ActionButton.vue"
-import plusIcon from "../assets/plus-icon.svg"
-import minusIcon from "../assets/minus-icon.svg"
+import { ShoppingItem } from "@/types"
+import ActionButton from "@/components/ActionButton.vue"
+import plusIcon from "@/assets/plus-icon.svg"
+import minusIcon from "@/assets/minus-icon.svg"
 
 const props = defineProps<{ shoppingList: ShoppingItem[] }>()
 

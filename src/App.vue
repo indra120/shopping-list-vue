@@ -14,11 +14,11 @@
 
 <script setup lang="ts">
 import { onMounted, onUpdated, ref } from "vue"
-import { ShoppingItem } from "./types"
-import Header from "./components/Header.vue"
-import ShoppingLists from "./components/ShoppingLists.vue"
-import AddShoppingItem from "./components/AddShoppingItem.vue"
-import Info from "./components/Info.vue"
+import { ShoppingItem } from "@/types"
+import Header from "@/components/Header.vue"
+import ShoppingLists from "@/components/ShoppingLists.vue"
+import AddShoppingItem from "@/components/AddShoppingItem.vue"
+import Info from "@/components/Info.vue"
 
 const shoppingList = ref<ShoppingItem[]>([])
 
