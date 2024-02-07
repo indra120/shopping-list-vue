@@ -8,10 +8,7 @@
       <p class="font-bold">Total Counts: {{ totalCounts }}</p>
     </div>
 
-    <button
-      @click="emit('deleteAll')"
-      class="bg-[none] border-0 p-0 text-red-500 text-xs font-bold cursor-pointer"
-    >
+    <button @click="emit('deleteAll')" class="bg-[none] border-0 p-0 text-red-500 text-xs font-bold cursor-pointer">
       Delete All Items
     </button>
   </div>
